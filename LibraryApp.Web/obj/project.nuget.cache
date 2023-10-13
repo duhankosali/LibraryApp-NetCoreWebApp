@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ycqyJJ22Ff49x/Xzxkktm7Oq2BlhutJweXUq8p1L16vk5PyvrYBWBGWOeSdbA+dayWuLXzREUDUPigc/fSjWJA==",
+  "success": true,
+  "projectFilePath": "D:\\Github\\LibraryApp\\LibraryApp.Web\\LibraryApp.Web.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\duhan\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.14.0\\microsoft.visualstudio.azure.containers.tools.targets.1.14.0.nupkg.sha512"
+  ],
+  "logs": []
+}

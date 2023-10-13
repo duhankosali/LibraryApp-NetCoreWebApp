@@ -1,0 +1,108 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "LibraryApp.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/LibraryApp.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LibraryApp.Core.dll": {}
+        }
+      },
+      "LibraryApp.Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "LibraryApp.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/LibraryApp.Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LibraryApp.Repository.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "LibraryApp.Core/1.0.0": {
+      "type": "project",
+      "path": "../LibraryApp.Core/LibraryApp.Core.csproj",
+      "msbuildProject": "../LibraryApp.Core/LibraryApp.Core.csproj"
+    },
+    "LibraryApp.Repository/1.0.0": {
+      "type": "project",
+      "path": "../LibraryApp.Repository/LibraryApp.Repository.csproj",
+      "msbuildProject": "../LibraryApp.Repository/LibraryApp.Repository.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "LibraryApp.Repository >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\duhan\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\Github\\LibraryApp\\LibraryCore.Service\\LibraryCore.Service.csproj",
+      "projectName": "LibraryCore.Service",
+      "projectPath": "D:\\Github\\LibraryApp\\LibraryCore.Service\\LibraryCore.Service.csproj",
+      "packagesPath": "C:\\Users\\duhan\\.nuget\\packages\\",
+      "outputPath": "D:\\Github\\LibraryApp\\LibraryCore.Service\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\duhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {
+            "D:\\Github\\LibraryApp\\LibraryApp.Repository\\LibraryApp.Repository.csproj": {
+              "projectPath": "D:\\Github\\LibraryApp\\LibraryApp.Repository\\LibraryApp.Repository.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

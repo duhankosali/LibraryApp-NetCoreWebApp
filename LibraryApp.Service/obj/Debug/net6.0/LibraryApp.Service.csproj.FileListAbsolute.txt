@@ -1,0 +1,17 @@
+D:\Github\LibraryApp\LibraryApp.Service\bin\Debug\net6.0\LibraryApp.Service.deps.json
+D:\Github\LibraryApp\LibraryApp.Service\bin\Debug\net6.0\LibraryApp.Service.dll
+D:\Github\LibraryApp\LibraryApp.Service\bin\Debug\net6.0\LibraryApp.Service.pdb
+D:\Github\LibraryApp\LibraryApp.Service\bin\Debug\net6.0\LibraryApp.Core.dll
+D:\Github\LibraryApp\LibraryApp.Service\bin\Debug\net6.0\LibraryApp.Repository.dll
+D:\Github\LibraryApp\LibraryApp.Service\bin\Debug\net6.0\LibraryApp.Repository.pdb
+D:\Github\LibraryApp\LibraryApp.Service\bin\Debug\net6.0\LibraryApp.Core.pdb
+D:\Github\LibraryApp\LibraryApp.Service\obj\Debug\net6.0\LibraryApp.Service.csproj.AssemblyReference.cache
+D:\Github\LibraryApp\LibraryApp.Service\obj\Debug\net6.0\LibraryApp.Service.GeneratedMSBuildEditorConfig.editorconfig
+D:\Github\LibraryApp\LibraryApp.Service\obj\Debug\net6.0\LibraryApp.Service.AssemblyInfoInputs.cache
+D:\Github\LibraryApp\LibraryApp.Service\obj\Debug\net6.0\LibraryApp.Service.AssemblyInfo.cs
+D:\Github\LibraryApp\LibraryApp.Service\obj\Debug\net6.0\LibraryApp.Service.csproj.CoreCompileInputs.cache
+D:\Github\LibraryApp\LibraryApp.Service\obj\Debug\net6.0\LibraryApp.Service.csproj.CopyComplete
+D:\Github\LibraryApp\LibraryApp.Service\obj\Debug\net6.0\LibraryApp.Service.dll
+D:\Github\LibraryApp\LibraryApp.Service\obj\Debug\net6.0\refint\LibraryApp.Service.dll
+D:\Github\LibraryApp\LibraryApp.Service\obj\Debug\net6.0\LibraryApp.Service.pdb
+D:\Github\LibraryApp\LibraryApp.Service\obj\Debug\net6.0\ref\LibraryApp.Service.dll
