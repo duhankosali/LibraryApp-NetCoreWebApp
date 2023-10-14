@@ -13,3 +13,5 @@ D:\Github\LibraryApp\LibraryApp.Repository\obj\Debug\net6.0\LibraryApp.Repositor
 D:\Github\LibraryApp\LibraryApp.Repository\obj\Debug\net6.0\refint\LibraryApp.Repository.dll
 D:\Github\LibraryApp\LibraryApp.Repository\obj\Debug\net6.0\LibraryApp.Repository.pdb
 D:\Github\LibraryApp\LibraryApp.Repository\obj\Debug\net6.0\ref\LibraryApp.Repository.dll
+D:\Github\LibraryApp\LibraryApp.Repository\bin\Debug\net6.0\LibraryApp.Repository.runtimeconfig.json
+D:\Github\LibraryApp\LibraryApp.Repository\obj\Debug\net6.0\LibraryApp.Repository.genruntimeconfig.cache
