@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "sHn70snVErBE3VLdK8/9I6NB4Fl1pLBsfO6afT/W+io752EwV2DNOULTQIRsTrBrfOASjckQeP+X0sD3rJWxRw==",
+  "dgSpecHash": "vNXi56vSNEQbC93jQ6uxAHivgwXpziikAFUHKLdqT3iUnkGPbC/GUqUQirsM96HDG00lGOrybIXuKvsJfucWUA==",
   "success": true,
   "projectFilePath": "D:\\Github\\LibraryApp\\LibraryApp.Web\\LibraryApp.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\duhan\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\duhan\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\duhan\\.nuget\\packages\\fluentvalidation\\11.7.1\\fluentvalidation.11.7.1.nupkg.sha512",
     "C:\\Users\\duhan\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\duhan\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\duhan\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",

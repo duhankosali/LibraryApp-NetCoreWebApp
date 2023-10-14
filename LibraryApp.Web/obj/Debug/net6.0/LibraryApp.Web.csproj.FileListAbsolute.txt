@@ -67,3 +67,6 @@ D:\Github\LibraryApp\LibraryApp.Web\bin\Debug\net6.0\runtimes\win\lib\netstandar
 D:\Github\LibraryApp\LibraryApp.Web\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 D:\Github\LibraryApp\LibraryApp.Web\bin\Debug\net6.0\Humanizer.dll
 D:\Github\LibraryApp\LibraryApp.Web\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Github\LibraryApp\LibraryApp.Web\bin\Debug\net6.0\AutoMapper.dll
+D:\Github\LibraryApp\LibraryApp.Web\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\Github\LibraryApp\LibraryApp.Web\bin\Debug\net6.0\FluentValidation.dll
