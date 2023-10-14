@@ -1,8 +1,11 @@
 using LibraryApp.Core.Repositories;
+using LibraryApp.Core.Services;
 using LibraryApp.Core.UnitOfWorks;
 using LibraryApp.Repository;
 using LibraryApp.Repository.Repositories;
 using LibraryApp.Repository.UnitOfWorks;
+using LibraryApp.Service.Mapping;
+using LibraryApp.Service.Services;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 
@@ -14,7 +17,11 @@ builder.Services.AddControllersWithViews();
 
 // Scopeds:
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>)); // for Repository Layer 
+builder.Services.AddScoped(typeof(IService<>), typeof(Service<>)); // for Business Layer
+
+// Automapper
+builder.Services.AddAutoMapper(typeof(MapProfile));
 
 // Connection Database:
 string connectionString = "server=(localdb)\\mssqllocaldb; database=libraryDb; integrated security=true;"; // temporary local db.

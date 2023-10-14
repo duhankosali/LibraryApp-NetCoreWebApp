@@ -12,7 +12,7 @@ namespace LibraryApp.Core.Services
         Task<T> GetByIdAsync(int id);
         Task<IEnumerable<T>> GetAllAsync();
         IQueryable<T> Where(Expression<Func<T, bool>> expression); // OrderBy etc. (Alfabetik sıralama için kullanacağız)
-        Task AddAsync(T entity);
+        Task<T> AddAsync(T entity);
         Task UpdateAsync(T entity); // (İlgili kitabı bir kullanıcıya atarken Update kullanacağız)
     }
 }
