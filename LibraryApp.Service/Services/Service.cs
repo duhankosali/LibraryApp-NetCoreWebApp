@@ -15,7 +15,7 @@ namespace LibraryApp.Service.Services
     {
         // dependency injection
         private readonly IGenericRepository<T> _repository;
-        private readonly IUnitOfWork _unitOfWork;
+        protected readonly IUnitOfWork _unitOfWork;
         public Service(IGenericRepository<T> repository, IUnitOfWork unitOfWork)
         {
             _repository = repository;
@@ -28,9 +28,19 @@ namespace LibraryApp.Service.Services
             return entity;
         }
 
-        public async Task<IEnumerable<T>> GetAllAsync()
+        public async Task<IEnumerable<T>> GetAllAsync(Expression<Func<T, bool>> filter = null, Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null)
         {
-            return await _repository.GetAll().ToListAsync();
+            IQueryable<T> query = _repository.GetAll();
+
+            if (filter != null)
+                query = query.Where(filter);
+            
+
+            if (orderBy != null)
+                return await orderBy(query).ToListAsync();
+            
+            else
+                return await query.ToListAsync();
         }
 
         public async Task<T> GetByIdAsync(int id)

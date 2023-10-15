@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "E5xTmj1wuZkjT9EBiJGoA++bk//zHXsL5fPujYXmOSo=",
+  "Hash": "QBhFdPPM7bkBXYT/XbxivfocOwomoVnGSOxVyLSX4cE=",
   "Source": "LibraryApp.Web",
   "BasePath": "_content/LibraryApp.Web",
   "Mode": "Default",
@@ -51,6 +51,40 @@
       "OriginalItemSpec": "D:\\Github\\LibraryApp\\LibraryApp.Web\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\LibraryApp.Web.bundle.scp.css"
     },
     {
+      "Identity": "D:\\Github\\LibraryApp\\LibraryApp.Web\\wwwroot\\books\\017e528d-a868-4296-b97c-45563dd3189c_bookphoto-1.jpeg",
+      "SourceId": "LibraryApp.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Github\\LibraryApp\\LibraryApp.Web\\wwwroot\\",
+      "BasePath": "_content/LibraryApp.Web",
+      "RelativePath": "books/017e528d-a868-4296-b97c-45563dd3189c_bookphoto-1.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\books\\017e528d-a868-4296-b97c-45563dd3189c_bookphoto-1.jpeg"
+    },
+    {
+      "Identity": "D:\\Github\\LibraryApp\\LibraryApp.Web\\wwwroot\\books\\d5826208-2a49-406d-88e4-e1f335196588_sucveceza.png",
+      "SourceId": "LibraryApp.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Github\\LibraryApp\\LibraryApp.Web\\wwwroot\\",
+      "BasePath": "_content/LibraryApp.Web",
+      "RelativePath": "books/d5826208-2a49-406d-88e4-e1f335196588_sucveceza.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\books\\d5826208-2a49-406d-88e4-e1f335196588_sucveceza.png"
+    },
+    {
       "Identity": "D:\\Github\\LibraryApp\\LibraryApp.Web\\wwwroot\\css\\site.css",
       "SourceId": "LibraryApp.Web",
       "SourceType": "Discovered",
@@ -83,6 +117,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\Github\\LibraryApp\\LibraryApp.Web\\wwwroot\\js\\flatpickr.min.js",
+      "SourceId": "LibraryApp.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Github\\LibraryApp\\LibraryApp.Web\\wwwroot\\",
+      "BasePath": "_content/LibraryApp.Web",
+      "RelativePath": "js/flatpickr.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\flatpickr.min.js"
     },
     {
       "Identity": "D:\\Github\\LibraryApp\\LibraryApp.Web\\wwwroot\\js\\site.js",

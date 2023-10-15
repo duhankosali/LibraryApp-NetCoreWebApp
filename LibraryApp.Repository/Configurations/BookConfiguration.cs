@@ -21,7 +21,7 @@ namespace LibraryApp.Repository.Configurations
 
             builder.Property(x => x.Author).IsRequired().HasMaxLength(50);
 
-            builder.Property(x => x.FilePath).IsRequired().HasMaxLength(256);
+            builder.Property(x => x.FilePath).IsRequired();
 
             builder.Property(x => x.IsInLibrary).IsRequired();
         }

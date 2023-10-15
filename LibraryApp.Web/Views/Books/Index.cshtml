@@ -1,0 +1,252 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+@model LibraryPageViewModel
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+<div class="container mt-5">
+    <div class="row">
+        @foreach (var book in Model.Books)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="~/books/@book.FilePath" class="card-img-top" alt="Kitap Resmi" style="max-height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">@book.Name</h5>
+                        <p class="card-text">@book.Author</p>
+                    </div>
+                    <div class="card-footer">
+                        @if (book.IsInLibrary)
+                        {
+                            <p class="text-success">Kitap kütüphanededir.</p>
+                            <button type="button" class="btn btn-warning loan-btn" data-toggle="modal" data-target="#loanModal" data-book-id="@book.Id">Ödünç Al</button>
+                        }
+                        else
+                        {
+                            <p class="text-danger">Kitap ödünç alındı.</p>
+                            <p>Ödünç Alan: @book.Borrower</p>
+                            <p>Teslim Tarihi: @book.FinishDate?.ToString("dd.MM.yyyy")</p>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body text-center d-flex flex-column justify-content-center">
+                    <h5 class="card-title">Yeni Kitap Ekle</h5>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addBookModal">Ekle</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Add New Book Modal -->
+<div class="modal fade" id="addBookModal" tabindex="-1" role="dialog" aria-labelledby="addBookModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addBookModalLabel">Yeni Kitap Ekle</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="createBookForm" method="post" asp-action="Create" asp-controller="Books" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label asp-for="@Model.CreateBook.Name">Kitap Adı</label>
+                            <input asp-for="@Model.CreateBook.Name" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="@Model.CreateBook.Author">Yazar Adı</label>
+                            <input asp-for="@Model.CreateBook.Author" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label for="photo">Fotoğraf</label>
+                            <input name="photo" class="form-control" type="file" accept=".jpg, .jpeg, .png"/>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                            <button type="submit" class="btn btn-primary">Kitap Ekle</button>
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+<!-- Borrow Modal -->
+<div class="modal fade" id="loanModal" tabindex="-1" aria-labelledby="loanModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loanModalLabel">Ödünç Alma Formu</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <form id="borrowBookForm" method="post" asp-action="Borrow" asp-controller="Books">
+            <input type="hidden" id="hiddenBookId" name="bookId" />
+ 
+            <div class="form-group">
+                <label asp-for="@Model.BorrowBook.BorrowName">Ödünç Alacak Kişi:</label>
+                <input asp-for="@Model.BorrowBook.BorrowName" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.BorrowBook.FinishDate">Teslim Tarihi:</label>
+                <input asp-for="@Model.BorrowBook.FinishDate" class="form-control datepicker" />
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Kaydet</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+            </div>
+        </form>
+
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<!-- Scripts -->
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+@*Script flatpicker*@
+<script>
+tomorrow = new Date();
+tomorrow.setDate(tomorrow.getDate() + 1);
+
+flatpickr('.datepicker', {
+enableTime: false,
+dateFormat: "Y-m-d",
+defaultDate: tomorrow,
+minDate: "today"
+});
+</script>
+
+@*Script that holds the Id value of the selected book*@
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    console.log("dooom");
+    var loanButtons = document.querySelectorAll('.loan-btn');
+    var hiddenBookIdInput = document.getElementById('hiddenBookId');
+
+    loanButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            var bookId = button.getAttribute('data-book-id');
+            hiddenBookIdInput.value = bookId;
+        });
+    });
+});
+</script>
+
+@*Script that 'borrowBookForm' validation (Kullanıcıya anlık bilgi vermek için)*@
+<script>
+
+    document.getElementById("borrowBookForm").addEventListener("submit", function(event) {
+    var isValid = true; // status
+
+    // form inputs:
+    var nameInput = document.querySelector("[name='BorrowBook.BorrowName']");
+    var dateInput = document.querySelector("[name='BorrowBook.FinishDate']");
+
+    if (!nameInput.value.trim()) {
+        Swal.fire(
+          'Kişi adı alanı boş bırakılamaz.',
+          '',
+          'error'
+        )
+        isValid = false;
+    }
+    else if (nameInput.value.trim().length > 50) {
+        Swal.fire(
+          'Kişi adı alanı en fazla 50 karakter olmalıdır.',
+          '',
+          'error'
+        )
+        isValid = false;
+    }
+
+    if (!dateInput.value.trim()) {
+         Swal.fire(
+          'Yazar adı alanı boş bırakılamaz.',
+          '',
+          'error'
+        )
+        isValid = false;
+    }
+
+    if (!isValid) {
+        event.preventDefault(); // cancelled operation.
+    }
+});
+
+</script>
+
+@*Script that 'createBookForm' validation (Kullanıcıya anlık bilgi vermek için)*@
+<script>
+document.getElementById("createBookForm").addEventListener("submit", function(event) {
+    var isValid = true; // status
+
+    // form inputs:
+    var nameInput = document.querySelector("[name='CreateBook.Name']");
+    var authorInput = document.querySelector("[name='CreateBook.Author']");
+    var photoInput = document.querySelector("[name='photo']");
+
+    if (!nameInput.value.trim()) {
+        Swal.fire(
+          'Kitap adı alanı boş bırakılamaz.',
+          '',
+          'error'
+        )
+        isValid = false;
+    }
+    else if (nameInput.value.trim().length > 50) {
+        Swal.fire(
+          'Kitap adı alanı en fazla 50 karakter olmalıdır.',
+          '',
+          'error'
+        )
+        isValid = false;
+    }
+
+    if (!authorInput.value.trim()) {
+         Swal.fire(
+          'Yazar adı alanı boş bırakılamaz.',
+          '',
+          'error'
+        )
+        isValid = false;
+    }
+    else if (authorInput.value.trim().length > 50) {
+        Swal.fire(
+          'Yazar adı alanı en fazla 50 karakter olmalıdır.',
+          '',
+          'error'
+        )
+        isValid = false;
+    }
+
+    if (!photoInput.value) {
+         Swal.fire(
+          'Lütfen bir fotoğraf seçiniz.',
+          '',
+          'error'
+        )
+        isValid = false;
+    }
+
+    if (!isValid) {
+        event.preventDefault(); // cancelled operation.
+    }
+});
+</script>
