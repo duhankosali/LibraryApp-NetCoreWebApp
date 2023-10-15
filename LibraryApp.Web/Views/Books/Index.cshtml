@@ -20,14 +20,14 @@
                     <div class="card-footer">
                         @if (book.IsInLibrary)
                         {
-                            <p class="text-success">Kitap kütüphanededir.</p>
-                            <button type="button" class="btn btn-warning loan-btn" data-toggle="modal" data-target="#loanModal" data-book-id="@book.Id">Ödünç Al</button>
+                            <p class="text-success">The book is in the library.</p>
+                            <button type="button" class="btn btn-warning loan-btn" data-toggle="modal" data-target="#loanModal" data-book-id="@book.Id">Borrow</button>
                         }
                         else
                         {
-                            <p class="text-danger">Kitap ödünç alındı.</p>
-                            <p>Ödünç Alan: @book.Borrower</p>
-                            <p>Teslim Tarihi: @book.FinishDate?.ToString("dd.MM.yyyy")</p>
+                            <p class="text-danger">The book was borrowed.</p>
+                            <p>Borrower: @book.Borrower</p>
+                            <p>Delivery Date: @book.FinishDate?.ToString("dd.MM.yyyy")</p>
                         }
                     </div>
                 </div>
@@ -37,8 +37,8 @@
         <div class="col-md-4 mb-4">
             <div class="card h-100">
                 <div class="card-body text-center d-flex flex-column justify-content-center">
-                    <h5 class="card-title">Yeni Kitap Ekle</h5>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addBookModal">Ekle</button>
+                    <h5 class="card-title">Add New Book</h5>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addBookModal">Add</button>
                 </div>
             </div>
         </div>
@@ -51,7 +51,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="addBookModalLabel">Yeni Kitap Ekle</h5>
+                    <h5 class="modal-title" id="addBookModalLabel">Add New Book</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -59,20 +59,20 @@
                 <div class="modal-body">
                     <form id="createBookForm" method="post" asp-action="Create" asp-controller="Books" enctype="multipart/form-data">
                         <div class="form-group">
-                            <label asp-for="@Model.CreateBook.Name">Kitap Adı</label>
+                            <label asp-for="@Model.CreateBook.Name">Book Name</label>
                             <input asp-for="@Model.CreateBook.Name" class="form-control" />
                         </div>
                         <div class="form-group">
-                            <label asp-for="@Model.CreateBook.Author">Yazar Adı</label>
+                            <label asp-for="@Model.CreateBook.Author">Author Name</label>
                             <input asp-for="@Model.CreateBook.Author" class="form-control" />
                         </div>
                         <div class="form-group">
-                            <label for="photo">Fotoğraf</label>
+                            <label for="photo">Photo</label>
                             <input name="photo" class="form-control" type="file" accept=".jpg, .jpeg, .png"/>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
-                            <button type="submit" class="btn btn-primary">Kitap Ekle</button>
+                            <button type="submit" class="btn btn-primary">Add Book</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                         </div>
                     </form>
                 </div>
@@ -86,7 +86,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="loanModalLabel">Ödünç Alma Formu</h5>
+        <h5 class="modal-title" id="loanModalLabel">Borrowing</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -96,16 +96,16 @@
             <input type="hidden" id="hiddenBookId" name="bookId" />
  
             <div class="form-group">
-                <label asp-for="@Model.BorrowBook.BorrowName">Ödünç Alacak Kişi:</label>
+                <label asp-for="@Model.BorrowBook.BorrowName">Borrower:</label>
                 <input asp-for="@Model.BorrowBook.BorrowName" class="form-control" />
             </div>
             <div class="form-group">
-                <label asp-for="@Model.BorrowBook.FinishDate">Teslim Tarihi:</label>
+                <label asp-for="@Model.BorrowBook.FinishDate">Delivery Date:</label>
                 <input asp-for="@Model.BorrowBook.FinishDate" class="form-control datepicker" />
             </div>
             <div class="modal-footer">
-                <button type="submit" class="btn btn-primary">Kaydet</button>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                <button type="submit" class="btn btn-primary">Save</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
             </div>
         </form>
 
@@ -161,16 +161,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if (!nameInput.value.trim()) {
         Swal.fire(
-          'Kişi adı alanı boş bırakılamaz.',
-          '',
+          'Warning!',
+          'Borrower name field cannot be left blank.',
           'error'
         )
         isValid = false;
     }
     else if (nameInput.value.trim().length > 50) {
         Swal.fire(
-          'Kişi adı alanı en fazla 50 karakter olmalıdır.',
-          '',
+          'Warning!',
+          'Borrower name field must be a maximum of 50 characters.',
           'error'
         )
         isValid = false;
@@ -178,8 +178,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if (!dateInput.value.trim()) {
          Swal.fire(
-          'Yazar adı alanı boş bırakılamaz.',
-          '',
+          'Warning!',
+          'The delivery date field cannot be left blank.',
           'error'
         )
         isValid = false;
@@ -204,16 +204,16 @@ document.getElementById("createBookForm").addEventListener("submit", function(ev
 
     if (!nameInput.value.trim()) {
         Swal.fire(
-          'Kitap adı alanı boş bırakılamaz.',
-          '',
+          'Warning!',
+          'Book name field cannot be left blank.',
           'error'
         )
         isValid = false;
     }
     else if (nameInput.value.trim().length > 50) {
         Swal.fire(
-          'Kitap adı alanı en fazla 50 karakter olmalıdır.',
-          '',
+          'Warning!',
+          'Book name field must be a maximum of 50 characters.',
           'error'
         )
         isValid = false;
@@ -221,16 +221,16 @@ document.getElementById("createBookForm").addEventListener("submit", function(ev
 
     if (!authorInput.value.trim()) {
          Swal.fire(
-          'Yazar adı alanı boş bırakılamaz.',
-          '',
+          'Warning!',
+          'Author name field cannot be left blank.',
           'error'
         )
         isValid = false;
     }
     else if (authorInput.value.trim().length > 50) {
         Swal.fire(
-          'Yazar adı alanı en fazla 50 karakter olmalıdır.',
-          '',
+          'Warning!',
+          'Author name field must be a maximum of 50 characters.',
           'error'
         )
         isValid = false;
@@ -238,8 +238,8 @@ document.getElementById("createBookForm").addEventListener("submit", function(ev
 
     if (!photoInput.value) {
          Swal.fire(
-          'Lütfen bir fotoğraf seçiniz.',
-          '',
+          'Warning!',
+          'Please select a photo.',
           'error'
         )
         isValid = false;
