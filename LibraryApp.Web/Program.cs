@@ -26,7 +26,14 @@ builder.Services.AddScoped<IBookService, BookService>();
 builder.Services.AddAutoMapper(typeof(MapProfile));
 
 // Connection Database:
-string connectionString = "server=(localdb)\\mssqllocaldb; database=libraryAppDb; integrated security=true;"; // temporary local db.
+
+// ***Environment tanýmlayarak projeyi ayaða kaldýrmak için: (Environment tanýmlamasýný IDE'nizi açmadan önce yapmanýz tavsiye edilir)
+string connectionString = Environment.GetEnvironmentVariable("MSSQL_CONNECTION_STRING"); // Open CMD --> setx MSSQL_CONNECTION_STRING "YOUR_CONNECTION_STRING" (windows)
+                                                                                         // Open Console --> export MSSQL_CONNECTION_STRING="YOUR_CONNECTION_STRING" (linux, mac)
+
+// ***Eðer environment tanýmlarken problem yaþýyorsanýz yukarýyý yoruma alýp connectionString'i alttaki satýra yapýþtýrabilirsiniz.
+//string connectionString = "YOUR_CONNECTION_STRING" 
+
 builder.Services.AddDbContext<AppDbContext>(x =>
 {
     x.UseSqlServer(connectionString, option =>

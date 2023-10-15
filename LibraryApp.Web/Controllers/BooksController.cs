@@ -23,7 +23,7 @@ namespace LibraryApp.Web.Controllers
         {
             LibraryPageViewModel model = new();
 
-            var books = await _services.GetAllAsync(orderBy: q => q.OrderBy(b => b.Name)); // get all and order by alphabet
+            var books = await _services.GetAllAsync(orderBy: query => query.OrderBy(book => book.Name));
             var booksDto = _autoMapper.Map<List<BookDto>>(books.ToList()); // mapping entity to dto
 
             // model
