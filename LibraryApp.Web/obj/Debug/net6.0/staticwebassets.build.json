@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "v8Ll9r9l6pQjJFIoXHnXBx6Vjyz2akUazH5yHgYrhRg=",
+  "Hash": "+9WdSlUVe6BWHxYLpBzghQIRIKlj7gEKmTZ4jSkNBXA=",
   "Source": "LibraryApp.Web",
   "BasePath": "_content/LibraryApp.Web",
   "Mode": "Default",
@@ -51,12 +51,12 @@
       "OriginalItemSpec": "D:\\Github\\LibraryApp\\LibraryApp.Web\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\LibraryApp.Web.bundle.scp.css"
     },
     {
-      "Identity": "D:\\Github\\LibraryApp\\LibraryApp.Web\\wwwroot\\books\\017e528d-a868-4296-b97c-45563dd3189c_bookphoto-1.jpeg",
+      "Identity": "D:\\Github\\LibraryApp\\LibraryApp.Web\\wwwroot\\books\\3cab60e0-f336-4a4e-ae8d-77348737c60b_satranc.jpeg.jpeg",
       "SourceId": "LibraryApp.Web",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Github\\LibraryApp\\LibraryApp.Web\\wwwroot\\",
       "BasePath": "_content/LibraryApp.Web",
-      "RelativePath": "books/017e528d-a868-4296-b97c-45563dd3189c_bookphoto-1.jpeg",
+      "RelativePath": "books/3cab60e0-f336-4a4e-ae8d-77348737c60b_satranc.jpeg.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -65,15 +65,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\books\\017e528d-a868-4296-b97c-45563dd3189c_bookphoto-1.jpeg"
+      "OriginalItemSpec": "wwwroot\\books\\3cab60e0-f336-4a4e-ae8d-77348737c60b_satranc.jpeg.jpeg"
     },
     {
-      "Identity": "D:\\Github\\LibraryApp\\LibraryApp.Web\\wwwroot\\books\\044178dc-4c9c-4038-ad95-328aca6df870_bookphoto-1.jpeg",
+      "Identity": "D:\\Github\\LibraryApp\\LibraryApp.Web\\wwwroot\\books\\5f54c405-3602-45d9-86fb-76f7ed6dbad3_sucveceza.png.png",
       "SourceId": "LibraryApp.Web",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Github\\LibraryApp\\LibraryApp.Web\\wwwroot\\",
       "BasePath": "_content/LibraryApp.Web",
-      "RelativePath": "books/044178dc-4c9c-4038-ad95-328aca6df870_bookphoto-1.jpeg",
+      "RelativePath": "books/5f54c405-3602-45d9-86fb-76f7ed6dbad3_sucveceza.png.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -82,15 +82,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\books\\044178dc-4c9c-4038-ad95-328aca6df870_bookphoto-1.jpeg"
+      "OriginalItemSpec": "wwwroot\\books\\5f54c405-3602-45d9-86fb-76f7ed6dbad3_sucveceza.png.png"
     },
     {
-      "Identity": "D:\\Github\\LibraryApp\\LibraryApp.Web\\wwwroot\\books\\9a28fd0d-2791-4420-823e-68b3ced89bcb_hayvanciftligi.jpg",
+      "Identity": "D:\\Github\\LibraryApp\\LibraryApp.Web\\wwwroot\\books\\d207aaa3-b9d8-4f4d-bcab-3eba8dea6a7d_hayvanciftligi.jpg.jpg",
       "SourceId": "LibraryApp.Web",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Github\\LibraryApp\\LibraryApp.Web\\wwwroot\\",
       "BasePath": "_content/LibraryApp.Web",
-      "RelativePath": "books/9a28fd0d-2791-4420-823e-68b3ced89bcb_hayvanciftligi.jpg",
+      "RelativePath": "books/d207aaa3-b9d8-4f4d-bcab-3eba8dea6a7d_hayvanciftligi.jpg.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -99,15 +99,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\books\\9a28fd0d-2791-4420-823e-68b3ced89bcb_hayvanciftligi.jpg"
+      "OriginalItemSpec": "wwwroot\\books\\d207aaa3-b9d8-4f4d-bcab-3eba8dea6a7d_hayvanciftligi.jpg.jpg"
     },
     {
-      "Identity": "D:\\Github\\LibraryApp\\LibraryApp.Web\\wwwroot\\books\\b83273ac-4a8e-493b-a827-09d72969e329_1984.jpg",
+      "Identity": "D:\\Github\\LibraryApp\\LibraryApp.Web\\wwwroot\\books\\e10bc07a-bf70-4869-a68b-94b43e4e0e9f_1984.jpg.jpg",
       "SourceId": "LibraryApp.Web",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Github\\LibraryApp\\LibraryApp.Web\\wwwroot\\",
       "BasePath": "_content/LibraryApp.Web",
-      "RelativePath": "books/b83273ac-4a8e-493b-a827-09d72969e329_1984.jpg",
+      "RelativePath": "books/e10bc07a-bf70-4869-a68b-94b43e4e0e9f_1984.jpg.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -116,24 +116,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\books\\b83273ac-4a8e-493b-a827-09d72969e329_1984.jpg"
-    },
-    {
-      "Identity": "D:\\Github\\LibraryApp\\LibraryApp.Web\\wwwroot\\books\\d5826208-2a49-406d-88e4-e1f335196588_sucveceza.png",
-      "SourceId": "LibraryApp.Web",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\Github\\LibraryApp\\LibraryApp.Web\\wwwroot\\",
-      "BasePath": "_content/LibraryApp.Web",
-      "RelativePath": "books/d5826208-2a49-406d-88e4-e1f335196588_sucveceza.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\books\\d5826208-2a49-406d-88e4-e1f335196588_sucveceza.png"
+      "OriginalItemSpec": "wwwroot\\books\\e10bc07a-bf70-4869-a68b-94b43e4e0e9f_1984.jpg.jpg"
     },
     {
       "Identity": "D:\\Github\\LibraryApp\\LibraryApp.Web\\wwwroot\\css\\site.css",
